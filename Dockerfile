@@ -1,7 +1,7 @@
 FROM python:latest
-RUN mkdir /iqthon
-WORKDIR /iqthon
-COPY requirements.txt /iqthon
+RUN mkdir /kaj
+WORKDIR /kaj
+COPY requirements.txt /kaj
 RUN pip3 install -r requirements.txt
-COPY . /iqthon
-CMD ["python3","-m","iqthon"]
+COPY . /kaj
+CMD ["python3","-m","kaj"]
