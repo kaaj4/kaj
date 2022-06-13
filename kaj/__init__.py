@@ -9,4 +9,4 @@ api_hash = os.environ["API_HASH"]
 string = os.environ["STRING_SESSION"]
 LOGGER = logging.getLogger(__name__)
 StartTime = time.time()
-iqthon = TelegramClient(StringSession(string), api_id, api_hash)
+kaj = TelegramClient(StringSession(string), api_id, api_hash)
