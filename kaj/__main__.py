@@ -14,11 +14,7 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await kaj(JoinChannelRequest("@kaj"))
-    except BaseException:
-        pass
-    try:
-        await kaj(JoinChannelRequest("@telethonmusic"))
+        await kaj(JoinChannelRequest("@iqthon"))
     except BaseException:
         pass
 def load_plugins(plugin_name):
