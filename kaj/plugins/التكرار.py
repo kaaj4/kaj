@@ -4,8 +4,8 @@ from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-from iqthon import iqthon
-@iqthon.on(events.NewMessage(outgoing=True, pattern="^.تكرار (.*)"))
+from kaj import kaj
+@kaj.on(events.NewMessage(outgoing=True, pattern="^.تكرار (.*)"))
 async def spammer(event):
     kno1 = await event.get_reply_message()
     kno = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -18,7 +18,7 @@ async def spammer(event):
         sleeptimem = 0.3
     await event.delete()
     await spam_function(event, kno1, kno, sleeptimem, sleeptimet)
-@iqthon.on(events.NewMessage(outgoing=True, pattern="^.(كاج|مؤقت|كار|كجج|مكرر|كج|كرر) (.*)"))
+@kaj.on(events.NewMessage(outgoing=True, pattern="^.(كاج|مؤقت|كار|كجج|مكرر|كج|كرر) (.*)"))
 async def spammer(event):
     reply = await event.get_reply_message()
     input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
