@@ -1,1 +1,1 @@
-worker: python3 -m iqthon
+worker: python3 -m kaj
