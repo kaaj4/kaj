@@ -4,7 +4,28 @@ from datetime import datetime
 import requests
 from telethon import __version__ as __tele_version__
 from telethon import events, TelegramClient
-from iqthon import iqthon, StartTime
+from kaj import kaj, StartTime
+@kaj.on(events.NewMessage(outgoing=True, pattern=f"^.فحص$"))
+async def alive_t(event):
+    start = datetime.now()
+    end = datetime.now()
+    (end - start).microseconds / 1000
+    uptime = get_readable_time((time.time() - StartTime))
+    reply_msg = f"**kaj Bot**\n===============\n"
+    reply_msg += f"أصدار البايثون: `{__python_version__}`\n"
+    reply_msg += f"أصدار التيليثون: `{__tele_version__}`\n"
+    reply_msg += f"أصدار كاج:** `1.0`**\n"
+    reply_msg += f"==============="
+    end_time = time.time()
+    reply_msg += f"\n- الوقت: {uptime}"
+    await event.edit(reply_msg)
+@kaj.on(events.NewMessage(outgoing=True, pattern=f"^.بنك$"))
+async def _(event):
+    app_info = await kaj.get_me()
+    start = datetime.now()
+    end = datetime.now()
+    ms = (end - start).microseconds / 1000
+    await event.edit(f"\n<b>- سرعة البنك<b/>: <code>{ms} في الثانيه</code>", parse_mode="html")
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -34,27 +55,3 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 __python_version__ = f"{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}"
-
-
-@iqthon.on(events.NewMessage(outgoing=True, pattern=f"^.فحص$"))
-async def alive_t(event):
-    start = datetime.now()
-    end = datetime.now()
-    (end - start).microseconds / 1000
-    uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[Telethon Bot](https://t.me/iqthon)**\n===============\n"
-    reply_msg += f"أصدار البايثون: `{__python_version__}`\n"
-    reply_msg += f"أصدار التيليثون: `{__tele_version__}`\n"
-    reply_msg += f"أصدار تليثون:** `1.0`**\n"
-    reply_msg += f"━━━━━━━━━━━━━━━━━━"
-    end_time = time.time()
-    reply_msg += f"\n- الوقت: {uptime}"
-    await event.edit(reply_msg)
-
-@iqthon.on(events.NewMessage(outgoing=True, pattern=f"^.بنك$"))
-async def _(event):
-    app_info = await iqthon.get_me()
-    start = datetime.now()
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    await event.edit(f"\n<b>- سرعة البنك<b/>: <code>{ms} في الثانيه</code>", parse_mode="html")
