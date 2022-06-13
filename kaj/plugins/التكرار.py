@@ -18,7 +18,7 @@ async def spammer(event):
         sleeptimem = 0.3
     await event.delete()
     await spam_function(event, kno1, kno, sleeptimem, sleeptimet)
-@iqthon.on(events.NewMessage(outgoing=True, pattern="^.مؤقت (.*)"))
+@iqthon.on(events.NewMessage(outgoing=True, pattern="^.(كاج|مؤقت|كار|كجج|مكرر|كج|كرر) (.*)"))
 async def spammer(event):
     reply = await event.get_reply_message()
     input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
