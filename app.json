@@ -1,22 +1,18 @@
 {
-  "name": "iqthon bot ",
-  "description": "bot telethon iqthon",
+  "name": "kaj bot",
+  "description": "kaj bot",
   "env": {
     "API_ID": {
       "description": "ايبي ايدي",
       "value": ""
     },
-    "TZ": {
-      "description": "هنا ضع المنطقه الزمنيه الخاص بك القارة والمحافظه- اذا كنت من العراق او السعوديه لا تغيرها",
-      "value": "Asia/Baghdad"
-    },
-    "BIO": {
-      "description": "نبذه حسابك",
-      "value": ""
-    },
     "API_HASH": {
       "description": "الايبي هاش",
       "value": ""
+    },
+    "TZ": {
+      "description": "الوقت",
+      "value": "Asia/Baghdad"
     },
     "STRING_SESSION": {
       "description": "كود تيرمكس",
