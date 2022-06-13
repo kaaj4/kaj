@@ -1,2 +1,3 @@
-# kaj
-@iqthon
+# telethon iqthon
+simple bot
+for learning only

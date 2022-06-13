@@ -1,0 +1,7 @@
+telethon
+python-dotenv
+heroku3
+aiohttp==3.6.2
+requests
+asyncio
+DateTime
