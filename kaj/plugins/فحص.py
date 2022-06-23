@@ -4,8 +4,8 @@ from datetime import datetime
 import requests
 from telethon import __version__ as __tele_version__
 from telethon import events, TelegramClient
-from kaj import kaj, StartTime
-@kaj.on(events.NewMessage(outgoing=True, pattern=f"^.فحص$"))
+from Superthon import Superthon, StartTime
+@Superthon.on(events.NewMessage(outgoing=True, pattern=f"^.فحص$"))
 async def alive_t(event):
     start = datetime.now()
     end = datetime.now()
@@ -14,14 +14,14 @@ async def alive_t(event):
     reply_msg = f"**Superthon**\n- - - - - - - - - - - - - - - - - - - - - -\n"
     reply_msg += f"أصدار البايثون: `{__python_version__}`\n"
     reply_msg += f"أصدار التيليثون: `{__tele_version__}`\n"
-    reply_msg += f"أصدار كاج:** `1.0`**\n"
+    reply_msg += f"أصدار سوبرثون:** `1.0`**\n"
     reply_msg += f"- - - - - - - - - - - - - - - - - - - - - -"
     end_time = time.time()
     reply_msg += f"\n- الوقت: {uptime}"
     await event.edit(reply_msg)
-@kaj.on(events.NewMessage(outgoing=True, pattern=f"^.بنك$"))
+@Superthon.on(events.NewMessage(outgoing=True, pattern=f"^.بنك$"))
 async def _(event):
-    app_info = await kaj.get_me()
+    app_info = await Superthon.get_me()
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
