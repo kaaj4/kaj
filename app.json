@@ -1,6 +1,6 @@
 {
-  "name": "kaj bot",
-  "description": "kaj bot",
+  "name": "Superthon",
+  "description": "Superthon",
   "env": {
     "API_ID": {
       "description": "ايبي ايدي",
@@ -15,7 +15,7 @@
       "value": "Asia/Baghdad"
     },
     "STRING_SESSION": {
-      "description": "كود تيرمكس",
+      "description": "كود التيرمكس",
       "value": ""
     }
   },
