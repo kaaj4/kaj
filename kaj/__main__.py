@@ -14,7 +14,7 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await kaj(JoinChannelRequest("@iqthon"))
+        await kaj(JoinChannelRequest("@Super_thon"))
     except BaseException:
         pass
 def load_plugins(plugin_name):
@@ -34,5 +34,5 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 kaj.start()
 kaj.loop.create_task(saves())
-print("- تم بنجاح تنصيب سورس سورس كاج  @kaj")
+print("- تم بنجاح تنصيب سورس سورس سوبرثون  @kaj")
 kaj.run_until_disconnected()
