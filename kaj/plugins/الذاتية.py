@@ -6,6 +6,6 @@ from os import remove
 async def datea(event):
     await event.delete()
     scertpic = await event.get_reply_message()
-    downloadjmthon = await scertpic.download_media()
-    send = await sbb_b.send_file("me", downloadjmthon)
-    remove(downloadjmthon)
+    downloadSuperthon = await scertpic.download_media()
+    send = await Superthon.send_file("me", downloadSuperthon)
+    remove(downloadSuperthon)
