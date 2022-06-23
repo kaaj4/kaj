@@ -11,11 +11,11 @@ async def alive_t(event):
     end = datetime.now()
     (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**kaj Bot**\n===============\n"
+    reply_msg = f"**Superthon**\n- - - - - - - - - - - - - - - - - - - - - -\n"
     reply_msg += f"أصدار البايثون: `{__python_version__}`\n"
     reply_msg += f"أصدار التيليثون: `{__tele_version__}`\n"
     reply_msg += f"أصدار كاج:** `1.0`**\n"
-    reply_msg += f"==============="
+    reply_msg += f"- - - - - - - - - - - - - - - - - - - - - -"
     end_time = time.time()
     reply_msg += f"\n- الوقت: {uptime}"
     await event.edit(reply_msg)
